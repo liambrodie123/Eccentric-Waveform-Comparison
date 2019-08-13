@@ -1,0 +1,93 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2990,         85]
+NotebookOptionsPosition[      2600,         71]
+NotebookOutlinePosition[      2948,         86]
+CellTagsIndexPosition[      2905,         83]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+From Hinder et al., 2017
+The following block of code loops through the specified eccentricity values \
+and exports the simulation file as a .dat file.\
+\>", "Text",
+ CellChangeTimes->{{3.774548632999485*^9, 3.7745486795229464`*^9}, {
+  3.774705130695219*^9, 
+  3.774705156676547*^9}},ExpressionUUID->"b1116f02-112c-430e-b86a-\
+da1ff38e82e7"],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"hEcc", "=", 
+     RowBox[{"EccentricIMRWaveform", "[", 
+      RowBox[{
+       RowBox[{"<|", 
+        RowBox[{
+         RowBox[{"\"\<q\>\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"\<x0\>\"", "\[Rule]", "0.1"}], ",", 
+         RowBox[{"\"\<e0\>\"", "\[Rule]", "i"}], ",", 
+         RowBox[{"\"\<l0\>\"", "\[Rule]", "0"}], ",", 
+         RowBox[{"\"\<phi0\>\"", "\[Rule]", "0"}], ",", 
+         RowBox[{"\"\<t0\>\"", "\[Rule]", "0"}]}], "|>"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "10000"}], "}"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Export", "[", 
+     RowBox[{
+      RowBox[{"\"\<hinderEIMR_\>\"", "<>", 
+       RowBox[{"ToString", "[", "i", "]"}], "<>", 
+       "\"\<_1_1_0_0_rh_.dat\>\""}], ",", " ", 
+      RowBox[{"Re", "[", "hEcc", "]"}]}], "]"}]}], " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "e", ",", " ", "m1", ",", " ", "m2", ",", " ", "s1", ",", " ", "s2", ",", 
+     " ", 
+     RowBox[{"rh", "/", "M"}]}], "*)"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", " ", "0.000", ",", " ", "0.480", ",", " ", "0.001"}], 
+    "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7745482171232104`*^9, 3.774548259925183*^9}, {
+   3.774548496019918*^9, 3.774548510670433*^9}, {3.774548763899195*^9, 
+   3.774548777549597*^9}, {3.774548899268228*^9, 3.774548962898384*^9}, {
+   3.7745490968868437`*^9, 3.7745491191403155`*^9}, {3.774549188788373*^9, 
+   3.7745492131204643`*^9}, {3.7745494624473915`*^9, 3.7745494774086666`*^9}, 
+   3.7745495248295145`*^9, {3.7745496386381893`*^9, 
+   3.774549648523815*^9}},ExpressionUUID->"b90b99fb-6d03-4c8b-b2b0-\
+8d25af6ae29b"]
+},
+WindowSize->{1440, 877},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 351, 8, 56, "Text",ExpressionUUID->"b1116f02-112c-430e-b86a-da1ff38e82e7"],
+Cell[912, 30, 1684, 39, 48, "Input",ExpressionUUID->"b90b99fb-6d03-4c8b-b2b0-8d25af6ae29b"]
+}
+]
+*)
+
